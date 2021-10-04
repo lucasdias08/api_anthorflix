@@ -12,26 +12,29 @@ Sistema desenvolvido como teste de conhecimento. Tecnologias envolvidas: JavaScr
 
 - __2.__ Crie um Banco de dados PostgreSQL com o nome "venx_db". Exatamente dessa forma;
 
-- __3.__ Navegue até a raíz do projeto com seu terminal (CMD, PowerShell, etc) e, em seguida, até a pasta "src";
+- __3.__ Inicialize os pacotes do projeto com o comando:
+>npm i
 
-- __4.__ Execute o comando: 
+- __4.__ Navegue até a raíz do projeto com seu terminal (CMD, PowerShell, etc) e, em seguida, até a pasta "src";
+
+- __5.__ Execute o comando: 
 >npx sequelize-cli db:migrate
 
-- __5.__ Em seguida, execute o comando: 
+- __6.__ Em seguida, execute o comando: 
 >npx sequelize-cli db:seed:all
 
-- __6.__ E, enfim, execute o comando: 
+- __7.__ E, enfim, execute o comando: 
 >npm start
 
-- __6.__ Se optar, execute em seguida o comando: 
+- __8.__ Se optar, execute em seguida o comando: 
 >npm test
 
 ### Justificativas
 
-- O comando do item 4 executa as MIGRATIONS para criar a tabela de usuários no banco de dados, a partir do arquivo "users.json";
-- O comando do item 5 executa as SEEDERS para povoar a tabela recém criada de usuários, manipulando e filtrando os dados de cada índice do array de usuários;
-- O comando do item 6 executa o servidor da API Rest;
-- O comando do item 7 executa o comando de teste. Com ele você pode ver que as operações solicitadas foram aprovadas pelo Testes Unitários nos end-point's;
+- O comando do item 5 executa as MIGRATIONS para criar a tabela de usuários no banco de dados, a partir do arquivo "users.json";
+- O comando do item 6 executa as SEEDERS para povoar a tabela recém criada de usuários, manipulando e filtrando os dados de cada índice do array de usuários;
+- O comando do item 7 executa o servidor da API Rest;
+- O comando do item 8 executa o comando de teste. Com ele você pode ver que as operações solicitadas foram aprovadas pelo Testes Unitários nos end-point's;
 
 # Manipulando a API
 
