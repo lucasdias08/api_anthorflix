@@ -1,38 +1,31 @@
 'use strict';
-const user = require('../models/user');
-const users = require('../../users.json');
 
-var data = new Date();
-var day = String(data.getDate()).padStart(2, '0');
-var month = String(data.getMonth() + 1).padStart(2, '0');
-var year = data.getFullYear();
-var dataCurrent = day + '/' + month + '/' + year;
+/*
+const bcrypt = require("bcryptjs");
 
-let query_users = [];
-for (let i = 0; i < users.results.length; i++) {
-  query_users.push({
-    name_user: users.results[i].name.first + " " + users.results[i].name.last,
-    email_user: users.results[i].email,
-    phone_user: users.results[i].phone,
-    genre_user: users.results[i].gender,
-    birth_user: users.results[i].dob.date.slice(0, 10),
-    nationality_user: users.results[i].nat,
-    path_image_user: users.results[i].picture.large,
-    street_user_address: users.results[i].location.street.name,
-    number_home_user_address: users.results[i].location.street.number,
-    city_user_address: users.results[i].location.city,
-    state_user_address: users.results[i].location.state,
-    latitude_user_address: users.results[i].location.coordinates.latitude,
-    longitude_user_address: users.results[i].location.coordinates.longitude,
-    createdAt: new Date(),
-    updatedAt: new Date()
-  })
-}
+const salt = bcrypt.genSaltSync(10);
+const password = bcrypt.hashSync("123456", salt);
+*/
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('Users', query_users);
+    return queryInterface.bulkInsert('Users', [{
+      name_user: "Usuário Seeder 1",
+      email_user: "usuario1@usuario.com",
+      password_user: "123456",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      name_user: "Usuário Seeder 2",
+      email_user: "usuario2@usuario.com",
+      password_user: "123456",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    }
+  ]);
   },
+  
   down: (queryInterface, Sequelize) => {
     return queryInterface.bulkDelete('Users', null, {});
   }
