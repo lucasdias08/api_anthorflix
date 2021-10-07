@@ -10,7 +10,7 @@ Sistema desenvolvido como teste de conhecimento. Tecnologias envolvidas: JavaScr
 
 - Se eu tivesse mais tempo (pessoal) livre, teria implementado todos os testes e em todas as rotas;
 
-- BUG conhecido: sem validação no que chega na rota via JSON;
+- BUG conhecido: sem validação no que chega na rota via JSON e alguns poucos testes não passam, mas é devido a maneira em que foram escritos;
 
 - Feature mais complicada: abstrair a ideia de atualizar dados de entidades de forma assíncrona. Optei pelo uso de Trigger;
 
@@ -35,7 +35,7 @@ Sistema desenvolvido como teste de conhecimento. Tecnologias envolvidas: JavaScr
 - __7.__ E, enfim, execute o comando: 
 >npm start
 
-- __8.__ Se optar, execute em seguida o comando: 
+- __8.__ Se optar, abra uma outra ABA do terminal, entre no mesmo caminho, e execute em seguida o comando: 
 >npm test
 
 ### Justificativas
